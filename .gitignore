@@ -5,6 +5,9 @@
 .env.production.local
 .env.development.local
 
+# Markdown files
+*.md
+
 # Python
 __pycache__/
 *.py[cod]
