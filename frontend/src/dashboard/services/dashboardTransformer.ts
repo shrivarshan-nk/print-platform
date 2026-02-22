@@ -25,8 +25,7 @@ export function formatDashboardStats(stats: DashboardStats) {
  */
 export function getExecutionModeStats(
   counts: Record<string, number>
-): Array<{ mode: string; label: string; count: number %>
-{
+): Array<{ mode: string; label: string; count: number }> {
   const modeLabels: Record<string, string> = {
     manual: '✍️ Manual',
     assisted: '⚙️ Assisted',
@@ -47,8 +46,7 @@ export function getExecutionModeStats(
  */
 export function getPaymentModeStats(
   counts: Record<string, number>
-): Array<{ mode: string; label: string; count: number %>
-{
+): Array<{ mode: string; label: string; count: number }> {
   const modeLabels: Record<string, string> = {
     counter: '💳 Pay @ Counter',
     prepaid: '💰 Prepaid Wallet',

@@ -9,7 +9,7 @@ interface PrimaryButtonProps extends ButtonProps {
   children: React.ReactNode;
 }
 
-const MotionButton = motion(Button);
+const MotionButton = motion(Button) as any;
 
 export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   isLoading = false,

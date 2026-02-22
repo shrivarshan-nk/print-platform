@@ -54,8 +54,8 @@ export async function createNewCampus(
     // Transform payload
     const transformedPayload = transformCampusPayload(payload);
 
-    // Call service
-    const response = await campusService.create(transformedPayload);
+    // Call service (cast as CampusCreate for creation)
+    const response = await campusService.create(transformedPayload as CampusCreate);
 
     // Transform response
     const transformed = transformCampusResponse(response);

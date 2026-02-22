@@ -33,8 +33,8 @@ export function transformCampusPayload(
   return {
     ...payload,
     // Trim whitespace
-    name: 'name' in payload ? payload.name.trim() : undefined,
-    location: 'location' in payload ? payload.location.trim() : undefined,
+    name: 'name' in payload && payload.name ? payload.name.trim() : undefined,
+    location: 'location' in payload && payload.location ? payload.location.trim() : undefined,
   };
 }
 

@@ -31,7 +31,7 @@ export function transformShopPayload(payload: ShopCreate | ShopUpdate): ShopCrea
   return {
     ...payload,
     // Trim whitespace
-    name: 'name' in payload ? payload.name.trim() : undefined,
+    name: 'name' in payload && payload.name ? payload.name.trim() : undefined,
   };
 }
 

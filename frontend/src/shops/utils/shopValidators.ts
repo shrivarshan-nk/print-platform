@@ -103,14 +103,14 @@ export function getShopFieldError(field: string, value: any): string | null {
  * Check if shop name is valid
  */
 export function isValidShopName(name: string): boolean {
-  return name && name.trim().length >= 2 && name.length <= 255;
+  return !!(name && name.trim().length >= 2 && name.length <= 255);
 }
 
 /**
  * Check if campus ID is valid
  */
 export function isValidCampusId(campusId: string): boolean {
-  return campusId && campusId.trim().length > 0;
+  return !!(campusId && campusId.trim().length > 0);
 }
 
 /**

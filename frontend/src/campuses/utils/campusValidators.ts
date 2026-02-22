@@ -92,14 +92,14 @@ export function getCampusFieldError(field: string, value: string): string | null
  * Check if campus name is valid
  */
 export function isValidCampusName(name: string): boolean {
-  return name && name.trim().length >= 2 && name.length <= 255;
+  return !!(name && name.trim().length >= 2 && name.length <= 255);
 }
 
 /**
  * Check if location is valid
  */
 export function isValidLocation(location: string): boolean {
-  return location && location.trim().length >= 2 && location.length <= 255;
+  return !!(location && location.trim().length >= 2 && location.length <= 255);
 }
 
 /**

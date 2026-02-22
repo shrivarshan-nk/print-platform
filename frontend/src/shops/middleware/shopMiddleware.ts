@@ -74,8 +74,8 @@ export async function createNewShop(payload: ShopCreate): Promise<ShopMiddleware
     // Transform payload
     const transformedPayload = transformShopPayload(payload);
 
-    // Call service
-    const response = await shopService.create(transformedPayload);
+    // Call service (cast as ShopCreate for creation)
+    const response = await shopService.create(transformedPayload as ShopCreate);
 
     // Transform response
     const transformed = transformShopResponse(response);
